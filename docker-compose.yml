@@ -4,6 +4,8 @@ services:
     image: "docker-node-mongo-todo-app"
     build: .
     command: "node server.js"
+    volumes:
+      - .:/usr/src/app
     ports:
       - "5000:5000"
     depends_on:
